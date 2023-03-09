@@ -1,7 +1,5 @@
 package com.r2ha.blackjack;
 
-import static org.fusesource.jansi.Ansi.ansi;
-
 public class Card {
     private final Suit suit;
     private final Rank rank;
