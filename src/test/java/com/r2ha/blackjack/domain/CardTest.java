@@ -46,8 +46,8 @@ class CardTest {
         String ansiRedString = ansi().fgRed().toString();
 
         // then we expect a red color ansi sequence
-        Assertions.assertThat(ConsoleCard.display(heartsCard))
-                  .contains(ansiRedString);
+        assertThat(ConsoleCard.display(heartsCard))
+                .contains(ansiRedString);
         assertThat(ConsoleCard.display(diamondsCard))
                 .contains(ansiRedString);
     }
