@@ -20,11 +20,11 @@ public class Card {
     public String display() {
         String[] lines = new String[7];
         lines[0] = "┌─────────┐";
-        lines[1] = String.format("│%s%s       │", rank.display(), rank == Rank.TEN ? "" : " ");
+        lines[1] = String.format("│%s%s       │", rank().display(), rank() == Rank.TEN ? "" : " ");
         lines[2] = "│         │";
         lines[3] = String.format("│    %s    │", suit.symbol());
         lines[4] = "│         │";
-        lines[5] = String.format("│       %s%s│", rank == Rank.TEN ? "" : " ", rank.display());
+        lines[5] = String.format("│       %s%s│", rank() == Rank.TEN ? "" : " ", rank().display());
         lines[6] = "└─────────┘";
 
         Ansi.Color cardColor = suit.isRed() ? Ansi.Color.RED : Ansi.Color.BLACK;
@@ -35,11 +35,15 @@ public class Card {
                                     .toString(), lines);
     }
 
+    private Rank rank() {
+        return rank;
+    }
+
     @Override
     public String toString() {
         return "Card {" +
                 "suit=" + suit +
-                ", rank=" + rank +
+                ", rank=" + rank() +
                 '}';
     }
 
@@ -51,13 +55,13 @@ public class Card {
         Card card = (Card) o;
 
         if (!suit.equals(card.suit)) return false;
-        return rank.equals(card.rank);
+        return rank().equals(card.rank);
     }
 
     @Override
     public int hashCode() {
         int result = suit.hashCode();
-        result = 31 * result + rank.hashCode();
+        result = 31 * result + rank().hashCode();
         return result;
     }
 }
