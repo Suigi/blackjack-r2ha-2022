@@ -35,11 +35,11 @@ public class Card {
                                     .toString(), lines);
     }
 
-    private Suit suit() {
+    public Suit suit() {
         return suit;
     }
 
-    private Rank rank() {
+    public Rank rank() {
         return rank;
     }
 
