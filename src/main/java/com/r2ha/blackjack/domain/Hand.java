@@ -6,8 +6,6 @@ import com.r2ha.blackjack.domain.Deck;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.fusesource.jansi.Ansi.ansi;
-
 public class Hand {
     private final List<Card> cards = new ArrayList<>();
 
