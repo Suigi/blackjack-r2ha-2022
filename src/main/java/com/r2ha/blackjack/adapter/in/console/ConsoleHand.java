@@ -7,12 +7,9 @@ import java.util.stream.Collectors;
 
 import static org.fusesource.jansi.Ansi.ansi;
 
-// Translating or Transforming or Mapping DOMAIN -> STRING
 public class ConsoleHand {
-
-    // Translate DOMAIN OBJECT (Hand) --> Some String for display purposes
     public static String displayFaceUpCard(Hand hand) {
-        return ConsoleCard.display(hand.faceUpCard());
+        return ConsoleCard.display(hand.dealerFaceUpCard());
     }
 
     public static String cardsAsString(Hand hand) {
