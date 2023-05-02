@@ -7,8 +7,6 @@ import org.fusesource.jansi.Ansi;
 import static org.fusesource.jansi.Ansi.ansi;
 
 public class ConsoleCard {
-
-    // Translating the CARD Domain Object to a STRING for display on the console
     public static String display(Card card) {
         String[] lines = new String[7];
         lines[0] = "┌─────────┐";
