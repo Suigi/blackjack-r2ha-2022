@@ -2,9 +2,7 @@
   <profile version="1.0">
     <option name="myName" value="Project Default" />
     <inspection_tool class="RedundantThrows" enabled="true" level="WARNING" enabled_by_default="true">
-      <scope name="Tests" level="WARNING" enabled="true">
-        <option name="IGNORE_ENTRY_POINTS" value="true" />
-      </scope>
+      <scope name="Tests" level="TEXT ATTRIBUTES" enabled="true" />
     </inspection_tool>
   </profile>
 </component>
