@@ -5,7 +5,10 @@ import com.r2ha.blackjack.domain.Deck;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static org.fusesource.jansi.Ansi.ansi;
 
 public class Hand {
     private final List<Card> cards = new ArrayList<>();
@@ -42,6 +45,17 @@ public class Hand {
 
     boolean dealerMustDrawCard() {
         return value() <= 16;
+    }
+
+    void display() {
+        System.out.println(cardsAsString());
+    }
+
+    private String cardsAsString() {
+        return cards()
+                .map(ConsoleCard::display)
+                .collect(Collectors.joining(
+                        ansi().cursorUp(6).cursorRight(1).toString()));
     }
 
     public Stream<Card> cards() {
