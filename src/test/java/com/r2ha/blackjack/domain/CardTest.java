@@ -1,9 +1,6 @@
 package com.r2ha.blackjack.domain;
 
 import com.r2ha.blackjack.adapter.in.console.ConsoleCard;
-import com.r2ha.blackjack.domain.Card;
-import com.r2ha.blackjack.domain.Rank;
-import com.r2ha.blackjack.domain.Suit;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;

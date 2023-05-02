@@ -1,6 +1,5 @@
 package com.r2ha.blackjack.adapter.in.console;
 
-import com.r2ha.blackjack.adapter.in.console.ConsoleCard;
 import com.r2ha.blackjack.domain.Hand;
 
 import java.util.stream.Collectors;
