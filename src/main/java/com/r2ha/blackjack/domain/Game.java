@@ -139,7 +139,7 @@ public class Game {
         System.out.println();
         System.out.println("Player has: ");
         System.out.println(ConsoleHand.cardsAsString(playerHand));
-        System.out.println(" (" + playerHand.displayValue() + ")");
+        System.out.println(" (" + playerHand.value() + ")");
     }
 
     private void displayBackOfCard() {
