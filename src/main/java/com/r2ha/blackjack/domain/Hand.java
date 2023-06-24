@@ -2,6 +2,7 @@ package com.r2ha.blackjack.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Hand {
     private final List<Card> cards = new ArrayList<>();
@@ -11,6 +12,10 @@ public class Hand {
     }
 
     public Hand() {
+    }
+
+    public Stream<Card> cards() {
+        return List.copyOf(cards).stream();
     }
 
     public int value() {
@@ -38,10 +43,6 @@ public class Hand {
 
     public boolean dealerMustDrawCard() {
         return value() <= 16;
-    }
-
-    public List<Card> cards() {
-        return List.copyOf(cards);
     }
 
     public void drawFrom(Deck deck) {
